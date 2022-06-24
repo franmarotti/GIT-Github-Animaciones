@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 150px 1500px auto 100px;
+    grid-template-areas:  "navbar navbar navbar navbar"
+                           "header header header header"
+                            "main main main main"
+                            "aside aside aside aside"
+                             "footer footer footer footer";
+
+                           
+                          
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color: indigo;
+}
+.header{
+    grid-area: header;
+    background-image: url(../img/car1.jpg);
+    background-size: cover;
+    display:flex;
+    align-items: center;
+}
+h2{
+    padding: 10px;
+}
+.main{
+    grid-area: main;
+}
+.aside{
+    grid-area: aside;
+}
+.footer{
+    grid-area: footer;
+    background-color: indigo;
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    background-color:indigo;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,91,1) 68%);
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+nav ul li{
+    display: inline-block;
+    padding: 30px;
+    position: relative;
+}
+nav ul li ul{
+
+    display: none;
+    position: absolute;
+    background-color: indigo;
+    left: 0%;
+}
+
+.info {
+    color: white; 
+    margin-left: 25px;
+}
+.btn {
+    background-color: indigo;
+    color: white;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 10px;
+    margin: 10px;
+}
+@media(min-width:576px){
+    .contenedor{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 150px 1500px auto 100px;
+        grid-template-areas:  "navbar navbar navbar navbar"
+                               "header header header header"
+                                "main main main aside"
+                                 "footer footer footer footer";
+    
+                               
+                              
+    }
+
+}
+.publicidad{
+    flex-wrap: wrap;
+}
+.publicidad_info{
+    flex-wrap: wrap;
+}
+
+.tarjeta{
+    padding: 10px;
+    transition: all 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tarjeta:hover{
+    transform: translate(25px);
+    
+}
+h1{
+    color: white;
+    padding: 25px;
+}
